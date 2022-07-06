@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="rgb.png">
+    <title>RGB</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="btn" id="btn">
+        CLICK ME UWU
+    </button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const body = document.body;
+        const RGB = ['red', 'green', 'blue'];
+        let i = 0;
+
+        btn.addEventListener('click',function(){
+            body.style.backgroundColor = RGB[i];
+            if(i == 2)
+            i = 0;
+            else
+            i++;
+        })
+    </script>
+</body>
+</html>
